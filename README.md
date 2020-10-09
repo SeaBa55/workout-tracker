@@ -59,4 +59,6 @@ You are required to submit the following:
 ## Revisions
 workout-tracker_v1.0 - Initial commit: Added basic README and .gitignore files.
 
-workout-tracker_v1.1 - Created a basic working burger app that allows the user to add a burger, devour
+workout-tracker_v1.1 - Created api-routes.js and established functional getLastWorkout route, which is called upon initial page load of index.html.
+
+workout-tracker_v1.2 - Fixed Total Workout Duration data input by adding a tallyDuration function, which sums all existing exersise durations for the last workout. 
