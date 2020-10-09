@@ -65,4 +65,9 @@ workout-tracker_v1.2 - Fixed Total Workout Duration data input by adding a tally
 
 workout-tracker_v1.3 - Added functionallity to the New Workout button in index.html.
 
-workout-tracker_v1.4 - Added functionallity to the Continue Workout button in index.html. User is now able to create a new workout or continue their last workout (by adding new exercises), while successfully updating the database. 
+workout-tracker_v1.4 - Added functionallity to the Continue Workout button in index.html. User is now able to create a new workout or continue their last workout (by adding new exercises), while successfully updating the database.
+
+workout-tracker_v1.5 -
+
+## Bugs
+Clicking on New Workout, initiates a new workout model in the database, so if the user leaves the create page prematurly the database will now contain an empty workout. 
