@@ -61,4 +61,8 @@ workout-tracker_v1.0 - Initial commit: Added basic README and .gitignore files.
 
 workout-tracker_v1.1 - Created api-routes.js and established functional getLastWorkout route, which is called upon initial page load of index.html.
 
-workout-tracker_v1.2 - Fixed Total Workout Duration data input by adding a tallyDuration function, which sums all existing exersise durations for the last workout. 
+workout-tracker_v1.2 - Fixed Total Workout Duration data input by adding a tallyDuration function, which sums all existing exersise durations for the last workout.
+
+workout-tracker_v1.3 - Added functionallity to the New Workout button in index.html.
+
+workout-tracker_v1.4 - Added functionallity to the Continue Workout button in index.html. User is now able to create a new workout or continue their last workout (by adding new exercises), while successfully updating the database. 

@@ -1,3 +1,4 @@
+var path = require("path");
 const router = require("express").Router();
 // const db = require("../models/");
 const Workout = require("../models/workout");
@@ -13,7 +14,10 @@ router.post("/api/workouts", ({ body }, res) => {
 });
 
 router.put("/api/workouts/:id", ({ body }, res) => {
-    Workout.insertMany(body)
+    let newExercise = body;
+    Workout.updateOne({ "_id": res.req.params.id },{
+      $push : {exercises: newExercise}
+    })
     .then(dbWorkout => {
       res.json(dbWorkout);
     })
@@ -41,6 +45,17 @@ router.get("/api/workouts/range", (req, res) => {
     .catch(err => {
       res.status(400).json(err);
     });
+});
+
+router.get("/exercise?", (req, res) => {
+  Workout.find({ "_id": req.query.id })
+  .then(dbWorkout => {
+    // res.json(dbWorkout);
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
+  })
+  .catch(err => {
+    res.status(400).json(err);
+  });
 });
 
 module.exports = router;
