@@ -67,7 +67,9 @@ workout-tracker_v1.3 - Added functionallity to the New Workout button in index.h
 
 workout-tracker_v1.4 - Added functionallity to the Continue Workout button in index.html. User is now able to create a new workout or continue their last workout (by adding new exercises), while successfully updating the database.
 
-workout-tracker_v1.5 -
+workout-tracker_v1.5 - Added route to the stats page. Stats page seems functional, need to investigate for bugs.
+
+workout-tracker_v1.6 - Connecting app to Heroku with mongodb as database.
 
 ## Bugs
 Clicking on New Workout, initiates a new workout model in the database, so if the user leaves the create page prematurly the database will now contain an empty workout. 
