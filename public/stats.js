@@ -148,7 +148,7 @@ function populateChart(data) {
   let pieChart = new Chart(pie, {
     type: "pie",
     data: {
-      labels: workouts,
+      labels: workouts.names,
       datasets: [
         {
           label: "Excercises Performed",
@@ -168,7 +168,7 @@ function populateChart(data) {
   let donutChart = new Chart(pie2, {
     type: "doughnut",
     data: {
-      labels: workouts,
+      ...resistanceWorkouts(workouts),
       datasets: [
         {
           label: "Excercises Performed",
@@ -185,6 +185,18 @@ function populateChart(data) {
     }
   });
 }
+
+function resistanceWorkouts(workouts) {
+  let resistance = [];
+  
+  workouts.names.forEach((curr,index) => {
+    if (workouts.type[index] === "resistance") {
+      resistance.push(curr);
+    };  
+  });
+  
+  return {labels: resistance};  
+};
 
 function duration(data) {
   let durations = [];
@@ -203,7 +215,9 @@ function calculateTotalWeight(data) {
 
   data.forEach(workout => {
     workout.exercises.forEach(exercise => {
-      total.push(exercise.weight);
+      if(exercise.type === "resistance") {
+        total.push(exercise.weight);
+      };
     });
   });
 
@@ -211,11 +225,15 @@ function calculateTotalWeight(data) {
 }
 
 function workoutNames(data) {
-  let workouts = [];
+  let workouts = {
+    names: [],
+    type: []
+  };
 
   data.forEach(workout => {
     workout.exercises.forEach(exercise => {
-      workouts.push(exercise.name);
+      workouts.names.push(exercise.name);
+      workouts.type.push(exercise.type);
     });
   });
   

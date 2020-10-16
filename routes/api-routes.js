@@ -1,6 +1,5 @@
 var path = require("path");
 const router = require("express").Router();
-// const db = require("../models/");
 const Workout = require("../models/workout");
 
 router.post("/api/workouts", ({ body }, res) => {
@@ -26,7 +25,7 @@ router.put("/api/workouts/:id", ({ body }, res) => {
     });
 }); 
 
-router.get("/api/workout", (req, res) => {
+router.get("/api/workouts", (req, res) => {
     Workout.find({})
     .then(dbWorkout => {
       res.json(dbWorkout);
@@ -49,8 +48,7 @@ router.get("/api/workouts/range", (req, res) => {
 
 router.get("/exercise?", (req, res) => {
   Workout.find({ "_id": req.query.id })
-  .then(dbWorkout => {
-    // res.json(dbWorkout);
+  .then(() => {
     res.sendFile(path.join(__dirname, "../public/exercise.html"));
   })
   .catch(err => {

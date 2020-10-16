@@ -71,5 +71,7 @@ workout-tracker_v1.5 - Added route to the stats page. Stats page seems functiona
 
 workout-tracker_v1.6 - Connected app to Heroku with mongodb as database.
 
+workout-tracker_v1.7 - Eliminated cardio workouts form the pounds lifted section.
+
 ## Bugs
 Clicking on New Workout, initiates a new workout model in the database, so if the user leaves the create page prematurly the database will now contain an empty workout. 
