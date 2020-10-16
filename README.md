@@ -3,7 +3,7 @@ Michigan State Bootcamp Homework assignment 17: NoSQL Fitness Tracker App
 
 ## Description
 
-This application uses an express along with mongodb using mongoose ODM to create a basic fitness tracking expreience. The application allows users to create new workout routines, aswell as adding exersises to their most recent workout.  
+This application uses an express along with mongodb (using mongoose ODM) to create a basic fitness tracking expreience. The application allows users to create new workout routines, aswell as adding exersises to their most recent workout.  
 
 ![Fitness-Tracker](./img/Fitness-Tracker.gif)
 
