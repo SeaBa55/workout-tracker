@@ -1,60 +1,48 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout Tracker
+Michigan State Bootcamp Homework assignment 17: NoSQL Fitness Tracker App 
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+## Description
 
-## User Story
+This application uses an express along with mongodb using mongoose ODM to create a basic fitness tracking expreience. The application allows users to create new workout routines, aswell as adding exersises to their most recent workout.  
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+![Fitness-Tracker](./img/Fitness-Tracker.gif)
 
-## Business Context
+## Table of Contents
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+* [Installation](#installation) 
+* [License](#license) 
+* [Contributors](#contributing) 
+* [Tests](#tests)
+* [Revisions](#Revisions)
+* [Bugs](#Bugs) 
 
-## Acceptance Criteria
+Revision History
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+## Installation
 
-The user should be able to:
+Run the app with heroku using the following link: 
+> https://workout-trackerrr.herokuapp.com/
 
-  * Add exercises to a previous workout plan.
 
-  * Add new exercises to a new workout plan.
+If running app locally from terminal you will need to run the following commands to get started:
+> npm i
 
-  * View the combined weight of multiple exercises on the `stats` page.
+> npm start
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+The app will be rendered to: 
+>http://localhost:3000/
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+## License
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+![License](https://img.shields.io/badge/License-none-blue.svg)
 
-## Commit Early and Often
+## Contributing
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+none
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+## Tests
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+none
 
 ## Revisions
 workout-tracker_v1.0 - Initial commit: Added basic README and .gitignore files.
@@ -76,4 +64,7 @@ workout-tracker_v1.7 - Eliminated cardio workouts form the pounds lifted section
 ## Bugs
 Clicking on New Workout, initiates a new workout model in the database, so if the user leaves the create page prematurly the database will then contain an empty workout.
 
-User can submit empty add exersise form which should be prevented to keep junk entires out of the database 
+User can submit empty add exersise form which should be prevented to keep junk entires out of the database
+
+- - -
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
